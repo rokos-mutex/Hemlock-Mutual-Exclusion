@@ -1,3 +1,11 @@
+"""
+Title: Hemlock Mutual Exclusion
+Authors:
+-   Sebastian Bobadilla
+-   Suhrid Gupta
+Description: A python implementation of the Hemlock mutual exclusion algorithm.
+"""
+
 from threading import Thread, current_thread, Condition
 
 

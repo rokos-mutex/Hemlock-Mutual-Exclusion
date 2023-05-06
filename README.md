@@ -1,4 +1,3 @@
-
 # Hemlock: Compact and Scalable Mutual Exclusion
 
 A python implementation of the Hemlock algorithm, which offers a compact and scalable solution for mutual exclusion.
@@ -11,15 +10,14 @@ from hemlock import HemlockThread, Lock
 mutex = Lock()
 
 def critical_section():
-  mutex.lock()
+  mutex.acquire()
   # Access critical section
-  mutex.unlock()
-  
+  mutex.release()
+
 t1 = HemlockThread(target=critical_section)
 t2 = HemlockThread(target=critical_section)
 t1.start()
 t2.start()
 t1.join()
 t2.join()
-  
 ```
